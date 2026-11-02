@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculate fees | Greenleaf Garden Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<div class="page-head"><div class="wrap"><h1>Calculate total fees</h1></div></div>
+<section>
+ <div class="wrap">
+  <form id="fees-form" novalidate>
+   <label for="cname">Customer name</label>
+   <input id="cname" type="text" autocomplete="name"><div class="error" id="err-cname"></div>
+   <label for="cemail">Email address</label>
+   <input id="cemail" type="email" autocomplete="email"><div class="error" id="err-cemail"></div>
+   <label for="service">Service</label>
+   <select id="service"></select><div class="error" id="err-service"></div>
+   <label for="qty">Quantity (visits, days or zones)</label>
+   <input id="qty" type="text" inputmode="numeric" placeholder="e.g. 4"><div class="error" id="err-qty"></div>
+   <div class="btn-row" style="margin-top:16px">
+    <button type="button" class="btn" id="add-btn">Add to invoice</button>
+    <button type="button" class="btn outline" id="invoice-btn">Create invoice</button>
+    <button type="button" class="btn outline" id="clear-btn">Clear all</button>
+   </div>
+  </form>
+ </div>
+</section>
+<section class="alt">
+ <div class="wrap">
+  <h2>Invoice</h2>
+  <p id="invoice-head" hidden style="font-weight:600"></p>
+  <div class="table-scroll"><table>
+   <thead><tr><th>Service</th><th class="num">Quantity × price</th><th class="num">Discount</th><th class="num">Line total</th><th></th></tr></thead>
+   <tbody id="invoice-body"></tbody>
+   <tfoot>
+    <tr><td colspan="3">Subtotal</td><td class="num" id="t-sub"></td><td></td></tr>
+    <tr><td colspan="3">Discounts</td><td class="num" id="t-disc"></td><td></td></tr>
+    <tr><td colspan="3">VAT (15%)</td><td class="num" id="t-vat"></td><td></td></tr>
+    <tr><td colspan="3">Total due</td><td class="num" id="t-total"></td><td></td></tr>
+   </tfoot></table></div>
+ </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/main.js"></script>
+<script src="js/fees.js"></script>
+</body>
+</html>

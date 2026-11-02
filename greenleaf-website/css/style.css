@@ -1,0 +1,71 @@
+:root{--deep:#1f4d2b;--green:#2e7d32;--cream:#faf6ea;--white:#fff;--amber:#f5a623;--ink:#22301f;--err:#b3261e;--line:#d9d3bf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px}
+img{max-width:100%}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+section{padding:72px 0}
+section.alt{background:var(--white)}
+h1{font-size:clamp(34px,5vw,52px);color:var(--deep);line-height:1.15;margin-bottom:16px}
+h2{font-size:clamp(26px,3.5vw,34px);color:var(--deep);margin-bottom:24px}
+h3{color:var(--deep);margin-bottom:8px}
+p{margin-bottom:16px}
+/* header + dropdown menu */
+header{background:var(--white);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-weight:700;color:var(--deep);text-decoration:none;font-size:20px}
+nav ul{list-style:none;display:flex;gap:6px;align-items:center}
+nav a{display:block;padding:10px 14px;text-decoration:none;color:var(--ink);border-radius:8px}
+nav a:hover,nav a.active{background:var(--cream);color:var(--deep)}
+.has-sub{position:relative}
+.sub{display:none;position:absolute;left:0;top:100%;min-width:220px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 8px 20px rgba(0,0,0,.1);flex-direction:column;align-items:stretch}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
+.menu-btn{display:none;background:none;border:2px solid var(--green);border-radius:8px;font-size:22px;padding:4px 12px;color:var(--deep);cursor:pointer}
+/* buttons */
+.btn{display:inline-block;padding:14px 28px;border-radius:12px;font:600 16px 'Poppins',sans-serif;text-decoration:none;border:2px solid var(--amber);background:var(--amber);color:var(--ink);cursor:pointer;min-height:48px}
+.btn:hover{filter:brightness(.95)}
+.btn.outline{background:transparent;border-color:var(--green);color:var(--green)}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero-img{background:linear-gradient(135deg,var(--green),var(--deep));border-radius:20px;min-height:320px;display:flex;align-items:center;justify-content:center;font-size:110px}
+.page-head{background:var(--deep);color:var(--white);padding:48px 0}
+.page-head h1{color:var(--white);margin:0}
+/* cards + grids */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:24px}
+.alt .card{background:var(--cream)}
+.card .icon{font-size:34px;display:block;margin-bottom:8px}
+.cta-band{background:var(--green);color:var(--white);text-align:center}
+.cta-band h2{color:var(--white)}
+/* tables */
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--white);border-radius:12px;overflow:hidden}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--deep);color:var(--white)}
+td.num,th.num{text-align:right}
+tfoot td{font-weight:700}
+/* forms */
+form{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px;max-width:640px}
+label{display:block;font-weight:600;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px;font:inherit;border:2px solid var(--line);border-radius:10px;background:var(--white)}
+input.invalid,select.invalid,textarea.invalid{border-color:var(--err)}
+.error{color:var(--err);font-size:14px;min-height:20px;margin-top:4px}
+.success{background:#e4f3e5;border:2px solid var(--green);border-radius:12px;padding:16px;margin-top:16px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+iframe{width:100%;height:320px;border:0;border-radius:16px}
+footer{background:var(--deep);color:var(--white);padding:40px 0}
+footer a{color:var(--amber)}
+@media(max-width:800px){
+ .hero,.two-col{grid-template-columns:1fr}
+ .menu-btn{display:block}
+ nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);border-bottom:1px solid var(--line);padding:10px 20px}
+ nav.open{display:block}
+ nav ul{flex-direction:column;align-items:stretch}
+ .sub{position:static;display:flex;box-shadow:none;border:0;padding-left:14px}
+ .btn{width:100%;text-align:center}
+ section{padding:48px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

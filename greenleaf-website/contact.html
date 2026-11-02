@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact us | Greenleaf Garden Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<div class="page-head"><div class="wrap"><h1>Contact us</h1></div></div>
+<section>
+ <div class="wrap two-col">
+  <form id="contact-form" novalidate>
+   <div><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name"><div class="error"></div></div>
+   <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email"><div class="error"></div></div>
+   <div><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" autocomplete="tel"><div class="error"></div></div>
+   <div><label for="topic">Topic</label>
+    <select id="topic" name="topic"><option value="">-- Choose a topic --</option><option>Book a visit</option><option>Get a quote</option><option>Special request</option><option>Other</option></select><div class="error"></div></div>
+   <div><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea><div class="error"></div></div>
+   <p style="margin-top:16px"><button class="btn" type="submit">Send message</button></p>
+   <div id="form-result"></div>
+  </form>
+  <div>
+   <h2>Find us</h2>
+   <p>📞 011 555 0123<br>✉️ info@greenleaf.example<br>🕒 Mon–Fri 07:30–17:00<br>📍 Johannesburg, Gauteng</p>
+   <iframe title="Map of Johannesburg" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=27.9%2C-26.3%2C28.2%2C-26.1&layer=mapnik"></iframe>
+  </div>
+ </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>
